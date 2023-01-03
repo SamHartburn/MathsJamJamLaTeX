@@ -1,0 +1,45 @@
+\definesongtitletemplate{mathsjamjam_individual}{
+
+\ifsongmeasuring
+	{\section*}
+	{\section*}{\songproperty{title}}
+
+\textit{Lyrics by \songproperty{lyrics}\\
+To the tune of \songproperty{subtitle}}
+}
+
+\definesongtitletemplate{mathsjamjam_book}{
+
+\ifsongmeasuring
+	{\section*}
+	{\section}{\songproperty{title}}
+
+\textit{Lyrics by \songproperty{lyrics}\\
+To the tune of \songproperty{subtitle}}
+}
+
+\definesongtitletemplate{mathsjamjamCapo_individual}{
+
+\ifsongmeasuring
+	{\section*}
+	{\section*}{\songproperty{title}}
+
+\ifsongproperty{capo}
+	{\textbf{Capo: \songproperty{capo}}\\}
+
+\textit{Lyrics by \songproperty{lyrics}\\
+To the tune of \songproperty{subtitle}}
+}
+
+\definesongtitletemplate{mathsjamjamCapo_book}{
+
+\ifsongmeasuring
+	{\section*}
+	{\section}{\songproperty{title}}
+
+\ifsongproperty{capo}
+	{\textbf{Capo: \songproperty{capo}}\\}
+
+\textit{Lyrics by \songproperty{lyrics}\\
+To the tune of \songproperty{subtitle}}
+}

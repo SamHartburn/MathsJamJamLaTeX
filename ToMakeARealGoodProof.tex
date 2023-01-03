@@ -1,0 +1,84 @@
+\documentclass{leadsheet}
+\usepackage{leadsheets}
+\input{LeadsheetsTemplates.tex}
+\usepackage[margin=0.75in]{geometry}
+
+%To use chords with capo, use template mathsjamjamCapo_individual and set transpose-capo = true
+%To use actual chords, use template mathsjamjam_individual and set transpose-capo = false
+%To print lyrics without chords, set print-chords = false
+\setleadsheets{
+  title-template = mathsjamjamCapo_individual,
+  after-song = \newpage,
+  chords/sharp = \sharp ,
+  chords/flat = \flat,
+  chords/format = \bfseries,
+  align-chords = {l},
+  verse/name=Verse,
+  verse/named=true,
+  verse/numbered=false,
+  verse/after-label=:,
+  remember-chords=true,
+  print-chords=true,
+  capo-nr-format = arabic,
+  transpose-capo=true,
+  chorus/format = 
+}
+
+\begin{document}
+
+\begin{song}{title=To Make a Real Good Proof,key=Bb, capo=1, lyrics=Sam Hartburn, subtitle=To Make You Feel My Love by Bob Dylan (but we're doing the Adele version)}
+%\begin{song}{title=To Make a Real Good Proof,key=Bb, lyrics=Sam Hartburn, subtitle=To Make You Feel My Love by Bob Dylan (but we're doing the Adele version)}
+
+\begin{intro}
+_{Bb} _{F/A} _{Ab} _{Eb} _{Ebm} _{Bb} _{C7} _{Eb/F} _{Bb}
+\end{intro}
+
+\begin{verse}
+^{Bb} When your theory's falling ^{F/A}on its face \\
+^{Ab} And you can't tie up that ^{Eb}one last case \\
+^{Ebm}Just remember there's no ^{Bb}need to race \\
+^{C7} To make a ^{Eb/F}real good ^{Bb}proof \\
+\end{verse}
+
+\begin{verse}
+^{} When you check it over and the ^{}doubts appear \\
+^{} And there is no-one there to ^{}calm your fears \\
+^{} You might think you need a ^{}million years \\
+^{} To make a ^{}real good ^{}proof \\
+\end{verse}
+
+\begin{bridge}
+^{Eb} I know you haven't tried ^{Bb/F}induction yet \\
+^{Gbaug} And contra^{Eb/G}diction's going ^{Bb}wrong \\
+^{Eb} You need to build your logic ^{Bb}step by step \\
+^{C7}Making sure that each line follows ^{F}on \\
+\end{bridge}
+
+\begin{verse}
+^{} You could use the letters ^{}$p$ and $q$ \\
+^{} And if that don't work try ^{}$w$ \\
+^{} There ain't nothing that you ^{}wouldn't do \\
+^{} To make a ^{}real good ^{}proof \\
+\end{verse}
+
+\begin{bridge}
+^{} You can draw a picture ^{}here or there \\
+^{} To make your ^{}thoughts easy to ^{}see \\
+^{} You can end it with a ^{}little square \\
+It's ^{}much faster than writing Q.E.^{}D. \\
+\end{bridge}
+
+\begin{verse}
+^{}It'll make you happy if your ^{}theorem's true \\
+^{} Might even win a Fields ^{}medal too \\
+^{} So do whatever you have ^{}got to do \\
+^{} To make a ^{}real good ^{}proof \\
+\end{verse}
+
+\begin{outro}
+^{C7} To make a ^{Eb/F}real good ^{Bb}proof \\
+\end{outro}
+
+\end{song}
+
+\end{document}

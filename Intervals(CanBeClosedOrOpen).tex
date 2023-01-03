@@ -1,0 +1,101 @@
+\documentclass{leadsheet}
+\usepackage{leadsheets}
+\input{LeadsheetsTemplates.tex}
+\usepackage[margin=0.75in]{geometry}
+
+%To use chords with capo, use template mathsjamjamCapo_individual and set transpose-capo = true
+%To use actual chords, use template mathsjamjam_individual and set transpose-capo = false
+%To print lyrics without chords, set print-chords = false
+\setleadsheets{
+  title-template = mathsjamjam_individual,
+  after-song = \newpage,
+  chords/sharp = \sharp ,
+  chords/flat = \flat,
+  chords/format = \bfseries,
+  align-chords = {l},
+  verse/name=Verse,
+  verse/named=true,
+  verse/numbered=false,
+  verse/after-label=:,
+  remember-chords=true,
+  print-chords=true,
+  capo-nr-format = arabic,
+  transpose-capo=false,
+  chorus/format = 
+}
+
+\begin{document}
+
+\begin{song}{title=Intervals (Can Be Closed or Open),key=Fm, capo=1, lyrics=Martin Harris, subtitle=Istanbul (not Constantinople) as sung by They Might Be Giants}
+%\begin{song}{title=Intervals (Can Be Closed or Open),key=Fm, lyrics=Martin Harris, subtitle=Istanbul (not Constantinople) as sung by They Might Be Giants}
+
+\begin{intro}
+_{Fm} _{C7} _{Fm} _{C7} _{Fm} _{C7} _{Fm} _{C7}
+\end{intro}
+
+\begin{verse}
+^{Fm}Intervals can be closed or open \\
+Yes an ^{Fm}interval can be closed or open \\
+And the ^{C7}brackets show, if it's closed or open \\
+If the ^{Fm}brackets are round, then exclude the bound \\
+
+^{Fm}If the upper bound is left open \\
+And the ^{Fm}lower bound is closed and you're hopin' \\
+That there ^{C7}is a word for this - some say ``clopen" \\
+For the ^{Fm}name of this ^{C7}inter- ^{Fm}val \\
+\end{verse}
+
+\begin{prechorus}
+They are ^{Fm}useful when you ^{Fm}make a ^{C7}histo- ^{Fm}gram \\
+^{C7}Why that's so is plain to see \\
+The ^{C}categories line up seamlessly \\
+\end{prechorus}
+
+\begin{chorus}
+So ^{Fm}brackets round if you're saying ``open" \\
+And ^{Fm}brackets square if ``closed" should be spoken \\
+And ^{C7}one of each if half-closed, half-open \\
+And the ^{Fm}word ``clopen" is a little ^{C7}quirk \\
+Of the way that an interval can ^{Fm}work \\
+\end{chorus}
+
+\begin{bridge}
+($\times 2$) ^{Fm}Waooooooh ^{Fm}Waaaaaooooooh ^{C7}Waaaaaooooooh ^{Fm}Waaaaaooooooh \\
+Interval (interval) \\
+\end{bridge}
+
+\begin{prechorus}
+They are ^{}useful when you ^{}make a ^{}histo- ^{}gram \\
+^{}Why that's so is plain to see \\
+The ^{}categories line up seamlessly \\
+\end{prechorus}
+
+\begin{chorus}
+So ^{}brackets round if you're saying ``open'' \\
+And ^{}brackets square if ``closed" should be spoken \\
+And ^{}one of each if half-closed, half-open \\
+And the ^{}word ``clopen" is a little ^{}quirk \\
+Of the way that an interval can ^{}work \\
+\end{chorus}
+
+\begin{solo}
+_{Fm} _{Fm} _{C7} _{Fm} \\
+_{Fm} _{Fm} _{C7} _{Fm} \\
+_{Fm} _{Fm} _{C7} _{Fm}
+\end{solo}
+
+\begin{chorus}
+So ^{}brackets round if you're saying ``open'' \\
+And ^{}brackets square if ``closed" should be spoken \\
+And ^{}one of each if half-closed, half-open \\
+And the ^{}word ``clopen" is a little ^{}quirk \\
+Of the way that an interval can ^{}work \\
+\end{chorus}
+
+\begin{outro}
+Inter^{Fm}val! \\
+\end{outro}
+
+\end{song}
+
+\end{document}

@@ -1,0 +1,92 @@
+\documentclass{leadsheet}
+\usepackage{leadsheets}
+\input{LeadsheetsTemplates.tex}
+\usepackage[margin=0.75in]{geometry}
+
+%To use chords with capo, use template mathsjamjamCapo_individual and set transpose-capo = true
+%To use actual chords, use template mathsjamjam_individual and set transpose-capo = false
+%To print lyrics without chords, set print-chords = false
+\setleadsheets{
+  title-template = mathsjamjam_individual,
+  after-song = \newpage,
+  chords/sharp = \sharp ,
+  chords/flat = \flat,
+  chords/format = \bfseries,
+  align-chords = {l},
+  verse/name=Verse,
+  verse/named=true,
+  verse/numbered=false,
+  verse/after-label=:,
+  remember-chords=true,
+  print-chords=true,
+  capo-nr-format = arabic,
+  transpose-capo=false,
+  chorus/format = 
+}
+
+\begin{document}
+
+\begin{song}{title={Pi Day, I'm In A Huff},key=D,lyrics=Colin Beveridge, subtitle=Friday I'm in Love by The Cure}
+
+\begin{intro}
+_{D} _{G} _{D} _{A} _{Bm} _{G} _{D} _{A}
+\end{intro}
+
+\begin{verse}
+^{D}I don't care a^{G}bout root 2, ^{D}e and phi, they're ^{A}not in Q \\
+^{Bm}gamma, I don't ^{G}have a clue, it's ^{D}Pi Day, I'm in a ^{A}huff \\
+
+^{D}I don't want to ^{G}spend my March ^{D}making tasty ^{A}pastry tarts \\
+^{Bm}They look like a ^{G}dreadful chart, it's ^{D}Pi Day, I'm in a ^{A}huff \\
+\end{verse}
+
+\begin{chorus}
+^{G}Tauists: ^{A}wait \\
+^{Bm}I'd rather self-^{G}immolate \\
+Than ^{D}have a pi v ^{A}tau debate \\
+\end{chorus}
+
+\begin{verse}
+^Lately I have ^seen a spate of ^people who can't ^write the date \\
+^ISO 8-6-^0-1's great, it's ^Pi Day, I'm in a ^huff \\
+
+^You say you have ^found beauty ^in Euler's i^dentity \\
+It's ^basic trigon^ometry, it's ^Pi Day, I'm in a ^huff \\
+\end{verse}
+
+\begin{chorus}
+^It's ok, ^mate \\
+^If you want to ^celebrate \\
+^But I'll geek out on ^{}\textbf{every} date \\
+\end{chorus}
+
+\begin{bridge}
+^{Bm} You've got some Raspberry ^{G}Pis \\
+You want to exer^{D}cise \\
+Computing ^{A}digits (in hex) of ^{Bm}pi \\
+You're shouting from the ^{G}roof \\
+You've got a lovely ^{D}proof \\
+Due to Bai^{A}ley, Borwein and ^{Bm}Plouffe \\
+Their work is great it's ^{G}true,  \\
+But I'd prefer if ^{D}you \\
+Found some^{A}thing useful to ^{Bm}do \\
+Forgive me acting ^{G}gruff \\
+I've just had en^{D}ough \\
+It's Pi Day, ^{A}I'm in a huff \\
+\end{bridge}
+
+\begin{verse}
+^I don't care a^bout root 2, ^e and phi, they're ^not in Q \\
+^gamma, I don't ^have a clue, it's ^Pi Day, I'm in a ^huff \\
+
+^I don't want to ^spend my March ^making tasty ^pastry tarts \\
+^They look like a ^dreadful chart, it's ^Pi Day, I'm in a ^huff \\
+\end{verse}
+
+\begin{outro}
+_{D} _{G} _{D} _{A} _{Bm} _{G} _{D} _{A} _{D}
+\end{outro}
+
+\end{song}
+
+\end{document}

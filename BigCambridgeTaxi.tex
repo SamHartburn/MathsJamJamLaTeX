@@ -1,0 +1,90 @@
+\documentclass{leadsheet}
+\usepackage{leadsheets}
+\input{LeadsheetsTemplates.tex}
+\usepackage[margin=0.75in]{geometry}
+
+%To use chords with capo, use template mathsjamjamCapo_individual and set transpose-capo = true
+%To use actual chords, use template mathsjamjam_individual and set transpose-capo = false
+%To print lyrics without chords, set print-chords = false
+\setleadsheets{
+  title-template = mathsjamjam_individual,
+  after-song = \newpage,
+  chords/sharp = \sharp ,
+  chords/flat = \flat,
+  chords/format = \bfseries,
+  align-chords = {l},
+  verse/name=Verse,
+  verse/named=true,
+  verse/numbered=false,
+  verse/after-label=:,
+  remember-chords=true,
+  print-chords=true,
+  capo-nr-format = arabic,
+  transpose-capo=true,
+  chorus/format =
+}
+
+\begin{document}
+
+\begin{song}{title={Big Cambridge Taxi},key=E,lyrics=Martin Harris, subtitle=Big Yellow Taxi by Joni Mitchell, capo=2}
+%\begin{song}{title={Big Cambridge Taxi},key=E,lyrics=Martin Harris, subtitle=Big Yellow Taxi by Joni Mitchell}
+
+\begin{intro}
+_{A} _{A} _{B} _{B} _{E} _{Esus4} _{E} _{Esus4}
+\end{intro}
+
+\begin{verse}
+They ^{A}made parallels by putting a line through a ^{E}dot ^{Esus4} ^{E} ^{Esus4} \\
+And ^{A}Euclid said that's the ^{B}only one you've ^{E}got ^{Esus4} ^{E} ^{Esus4} \\
+\end{verse}
+
+\begin{chorus}
+^{E}Don't it always ^{Emaj7}seem to go \\
+That you ^{A/E}don't know what you've assumed 'til it's ^{E}wrong? \\
+They ^{A}made parallels by ^{B}putting a line through a ^{E}dot ^{Esus4} ^{E} ^{Esus4} \\
+\end{chorus}
+
+\begin{verse}
+^{}Surface of a sphere, lines go the whole way ^{}round ^{} ^{} ^{} \\
+And ^{}parallel lines are ^{}simply nowhere to be ^{}found ^{} ^{} ^{}  \\
+\end{verse}
+
+\begin{chorus}
+^{}Don't it always ^{}seem to go \\
+That you ^{}don't know what you've assumed 'til it's ^{}wrong? \\
+They ^{}made parallels by ^{}putting a line through a ^{}dot ^{} ^{} ^{} \\
+\end{chorus}
+
+\begin{verse}
+^{}Hey Lobachevsky, on your hyperbolic ^{}plane now  ^{} ^{} ^{} \\
+through a ^{}dot, a parallel then ^{}do it again and a^{}gain, ^{} ^{} ^{}yeah \\
+\end{verse}
+
+\begin{chorus}
+^{}Don't it always ^{}seem to go \\
+That you ^{}don't know what you've assumed 'til it's ^{}wrong? \\
+They ^{}made parallels by ^{}putting a line through a ^{}dot ^{} ^{} ^{} \\
+\end{chorus}
+
+\begin{verse}
+^{}One-seven-two-nine - Hardy though it was ^{}bland ^{} ^{} ^{} \\
+but that ^{}taxicab number ^{}interested Ramanu^{}jan ^{} ^{} ^{} \\
+\end{verse}
+
+\begin{chorus}
+^{}Don't it always ^{}seem to go \\
+That you ^{}don't know what you've assumed 'til it's ^{}wrong? \\
+They ^{}made parallels by ^{}putting a line through a ^{}dot  ^{} ^{} ^{} \\
+\end{chorus}
+
+\begin{outro}
+^{E}Don't it always ^{Emaj7}seem to go \\
+That you ^{A/E}don't know what you've assumed 'til it's ^{E}wrong? \\
+They ^{A}made parallels by ^{B}putting a line through a ^{E}dot  ^{Esus4} ^{E} ^{Esus4} \\
+They ^{A}made parallels by ^{B}putting a line through a ^{E}dot  ^{Esus4} ^{E} ^{Esus4} \\
+They ^{A}made parallels by ^{B}putting a line through a ^{E}dot  ^{Esus4} ^{E} ^{Esus4} \\
+\end{outro}
+
+\end{song}
+
+\end{document}

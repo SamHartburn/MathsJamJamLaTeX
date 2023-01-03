@@ -1,0 +1,88 @@
+\documentclass{leadsheet}
+\usepackage{leadsheets}
+\input{LeadsheetsTemplates.tex}
+\usepackage[margin=0.75in]{geometry}
+
+%To use chords with capo, use template mathsjamjamCapo_individual and set transpose-capo = true
+%To use actual chords, use template mathsjamjam_individual and set transpose-capo = false
+%To print lyrics without chords, set print-chords = false
+\setleadsheets{
+  title-template = mathsjamjam_individual,
+  after-song = \newpage,
+  chords/sharp = \sharp ,
+  chords/flat = \flat,
+  chords/format = \bfseries,
+  align-chords = {l},
+  verse/name=Verse,
+  verse/named=true,
+  verse/numbered=false,
+  verse/after-label=:,
+  remember-chords=true,
+  print-chords=true,
+  capo-nr-format = arabic,
+  transpose-capo=false,
+  chorus/format = `'
+}
+
+\begin{document}
+
+\begin{song}{title=$\left(Mm^2\right)^4$,lyrics=Martin Harris, subtitle=Mmm Mmm Mmm Mmm by The Crash Test Dummies, key=Ab, capo=3}
+%\begin{song}{title=$\left(Mm^2\right)^4$,lyrics=Martin Harris, subtitle=Mmm Mmm Mmm Mmm by The Crash Test Dummies, key=Eb}
+
+\begin{intro}
+_{Gm} _{Dm} _{Gm} _{Dm} _{Ab} _{Bb6} _{Ab} _{Bb6}
+\end{intro}
+
+\begin{verse}
+^{Cm}Once ^{Bb} there was this ^{Eb}kid ^{Eb}whose \\
+^{Ab}Teacher made his ^{Eb}class add up the ^{Bb}numbers to a ^{Eb}hundred \\
+He ^{Ab}thought ^{Ab} they'd need a ^{Bb}long ^{Eb}time \\
+^{Bb}This, ^{Eb}kid, ^{Ab} took just a ^{Eb}matter of ^{Bb}seconds ^{Bb} \\
+It ^{B}helped him find a ^{Eb}formula \\
+For ^{B} triangle ^{Abadd+11}num-  ^{Ab}bers \\
+\end{verse}
+
+\begin{chorus}
+^{Gm}Mmm Mmm ^{Dm}Mmm Mmm ^{Gm}Mmm Mmm ^{Dm}Mmm Mmm ^{Ab} ^{Bb} ^{Ab} ^{Bb} \\
+\end{chorus}
+
+\begin{verse}
+^{}Once ^{} there was this ^{}girl ^{}who \\
+^{}Showed a great ^{}ability for ^{}higher mathe^{}matics \\
+But ^{}when ^{} she tried to ^{}lec ^{}ture \\
+^{}Her, ^{}school, ^{} said "No way, ^{}not with your ^{}own name" ^{} \\
+She ^{}had to lecture ^{}under \\
+The ^{}name of her ^{}men- ^{}tor \\
+\end{verse}
+
+\begin{chorus}
+($\times$2)\\
+^{}Mmm Mmm ^{}Mmm Mmm ^{}Mmm Mmm ^{}Mmm Mmm ^{} ^{} ^{} ^{} \\
+\end{chorus}
+
+\begin{bridge}
+^{Fm} Both girl and ^{Eb}boy loved ^{Bb}Math \\
+^{Fm} And there's plenty ^{Eb}more like ^{Bb}that ^{Ab} \\
+\end{bridge}
+
+\begin{verse}
+Like ^{}once ^{} there was this ^{}guy ^{}who \\
+^{}Sent his notes from ^{}where he lived in ^{}India to ^{}Cambridge \\
+And ^{}when ^{}they brought him ^{}o ^{}ver \\
+^{}He, ^{}had, ^{} two further ^{}volumes to ^{}show them ^{} \\
+He ^{}even found a ^{}fact in \\
+The ^{}number of a ^{}ta- ^{}xi \\
+\end{verse}
+
+\begin{chorus}
+($\times$2)\\
+^{}Mmm Mmm ^{}Mmm Mmm ^{}Mmm Mmm ^{}Mmm Mmm ^{} ^{} ^{} ^{} \\
+\end{chorus}
+
+\begin{outro}
+_{Gm} _{Dm} _{Gm} _{Dm} _{Ab} _{Bb6} _{Ab} _{Bb6} _{Cm}
+\end{outro}
+
+\end{song}
+
+\end{document}
