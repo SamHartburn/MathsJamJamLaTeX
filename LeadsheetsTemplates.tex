@@ -88,5 +88,33 @@ To the tune of \songproperty{subtitle}}
   disable-capo .bool_set_inverse:N = \l__leadsheets_enable_capo_bool,
 }
 
+
+\cs_new_protected:Npn \leadsheets_recall_chord:nnn #1#2#3
+  {
+    \seq_pop_left:NNF \g__leadsheets_chords_sequences_seq
+      \l__leadsheets_tmpa_tl
+    { \msg_error:nnV {leadsheets} {no-chords} \l_leadsheets_verse_type_tl }
+    \tl_if_empty:nF {#3}
+    {
+      \tl_set:Nn \l__leadsheets_tmpa_tl {#3}
+    }
+    \leadsheets_set_chord:nnn
+      {#1}
+      {#2}
+      { \leadsheets_chord_write:V \l__leadsheets_tmpa_tl }
+  }
+
+\RenewDocumentCommand \recallchord {st-}
+  {
+    \peek_catcode:NTF \c_group_begin_token
+    {
+      \leadsheets_recall_chord:nnn {#1} {#2}
+    }
+    {
+      \leadsheets_recall_chord:nn {#1} {#2}
+    }
+  }
+
+
 \ExplSyntaxOff
 
