@@ -59,5 +59,34 @@ To the tune of \songproperty{subtitle}}
 
 \RenewDocumentCommand \writechord {}
 {\leadsheets_chord_maybe_write:n }
+
+
+\bool_new:N \l__leadsheets_enable_capo_bool
+\bool_set_true:N \l__leadsheets_enable_capo_bool
+
+\cs_new_eq:NN \__leadsheets_original_check_capo:  \__leadsheets_check_capo:
+\cs_set_protected:Npn \__leadsheets_check_capo:
+{
+  \bool_if:NT \l__leadsheets_enable_capo_bool
+  {
+    \__leadsheets_original_check_capo:
+  }
+}
+
+\cs_new_eq:NN \leadsheets_original_capo: \leadsheets_capo:
+\cs_set_protected:Npn \leadsheets_capo:
+{
+  \bool_if:NT \l__leadsheets_enable_capo_bool
+  {
+    \leadsheets_original_capo:
+  }
+}
+
+\keys_define:nn {leadsheets}
+{
+  enable-capo .bool_set:N = \l__leadsheets_enable_capo_bool,
+  disable-capo .bool_set_inverse:N = \l__leadsheets_enable_capo_bool,
+}
+
 \ExplSyntaxOff
 
