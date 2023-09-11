@@ -43,3 +43,78 @@ To the tune of \songproperty{subtitle}}
 \textit{Lyrics by \songproperty{lyrics}\\
 To the tune of \songproperty{subtitle}}
 }
+
+% Swallow the inline chords when `print chords` is set to false
+\ExplSyntaxOn
+\cs_new_protected:Npn \leadsheets_chord_maybe_write:n
+{
+  \bool_if:NTF \l__leadsheets_chord_print_bool
+  {
+    \leadsheets_chord_write:n
+  }
+  {
+    \use_none:n
+  } 
+}
+
+\RenewDocumentCommand \writechord {}
+{\leadsheets_chord_maybe_write:n }
+
+
+\bool_new:N \l__leadsheets_enable_capo_bool
+\bool_set_true:N \l__leadsheets_enable_capo_bool
+
+\cs_new_eq:NN \__leadsheets_original_check_capo:  \__leadsheets_check_capo:
+\cs_set_protected:Npn \__leadsheets_check_capo:
+{
+  \bool_if:NT \l__leadsheets_enable_capo_bool
+  {
+    \__leadsheets_original_check_capo:
+  }
+}
+
+\cs_new_eq:NN \leadsheets_original_capo: \leadsheets_capo:
+\cs_set_protected:Npn \leadsheets_capo:
+{
+  \bool_if:NT \l__leadsheets_enable_capo_bool
+  {
+    \leadsheets_original_capo:
+  }
+}
+
+\keys_define:nn {leadsheets}
+{
+  enable-capo .bool_set:N = \l__leadsheets_enable_capo_bool,
+  disable-capo .bool_set_inverse:N = \l__leadsheets_enable_capo_bool,
+}
+
+
+\cs_new_protected:Npn \leadsheets_recall_chord:nnn #1#2#3
+  {
+    \seq_pop_left:NNF \g__leadsheets_chords_sequences_seq
+      \l__leadsheets_tmpa_tl
+    { \msg_error:nnV {leadsheets} {no-chords} \l_leadsheets_verse_type_tl }
+    \tl_if_empty:nF {#3}
+    {
+      \tl_set:Nn \l__leadsheets_tmpa_tl {#3}
+    }
+    \leadsheets_set_chord:nnn
+      {#1}
+      {#2}
+      { \leadsheets_chord_write:V \l__leadsheets_tmpa_tl }
+  }
+
+\RenewDocumentCommand \recallchord {st-}
+  {
+    \peek_catcode:NTF \c_group_begin_token
+    {
+      \leadsheets_recall_chord:nnn {#1} {#2}
+    }
+    {
+      \leadsheets_recall_chord:nn {#1} {#2}
+    }
+  }
+
+
+\ExplSyntaxOff
+
